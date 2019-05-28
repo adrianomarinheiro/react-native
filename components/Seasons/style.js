@@ -8,5 +8,6 @@ export default StyleSheet.create({
     },
     button: {
         margin: 15,
+        
     }
 });
