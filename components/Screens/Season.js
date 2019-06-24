@@ -1,26 +1,40 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { Container, Header, Content, List, ListItem, Spinner } from 'native-base';
-
+import { Container, Header, Content, List, ListItem, Spinner, Card, CardItem, CardSwiper, Button, Icon } from 'native-base';
+import DetailsButtons from '../components/DetailsButtons';
 import { SafeAreaView } from 'react-navigation';
+
 
 export default class Season extends React.Component {
     
     state = {
-        loading : true,
-        data: [],
+        loading: false,
     };
     
+    constructor(props) {
+        super(props);
+    
+        this.goTo = this.goTo.bind(this);
+      }
     
     static navigationOptions = () => {
         return {
-            title: 'Temporadas',
+            title: 'Temporada',
         };
+    }
+
+    goTo(details) {
+        const season = this.props.navigation.getParam('season');
+
+        this.props.navigation.navigate(details, {
+            season
+        });
     }
     
     componentDidMount() {
         const season = this.props.navigation.getParam('season');
         this.getData(season);
+      
     }
     
     getData(seasons) {
@@ -32,44 +46,26 @@ export default class Season extends React.Component {
             
         });
     }
-    
-    
+
+
     render() {
-        const data = this.state.data;
-        const loading = this.state.loading;
-        console.log(data);
-        if(loading){
-            return (<Spinner color='red' />)
-        } else {
         return (
             <SafeAreaView style={styles.container}>
-                <Container>
-                    <Content>
-                        <List>
-                            <ListItem>
-                                <Text></Text>
-                            </ListItem>
-                            <ListItem>
-                                <Text>Nathaniel Clyne</Text>
-                            </ListItem>
-                            <ListItem>
-                                <Text>Dejan Lovren</Text>
-                            </ListItem>
-                        </List>
-                    </Content>
-                </Container>
+                <DetailsButtons handlerClick={this.goTo}></DetailsButtons>
             </SafeAreaView>
-             );
-        }
-        }
+        );
     }
+}
+    
     
     const styles = StyleSheet.create({
         container: {
             flex: 1,
-            backgroundColor: '#fff',
+            backgroundColor: '#bdbdbd',
             alignItems: 'center',
             justifyContent: 'center',
+
         },
+          
     });
     

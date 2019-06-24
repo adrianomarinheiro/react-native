@@ -8,6 +8,9 @@ import{
 
 import HomeScreen from './components/Screens/Home';
 import SeasonScreen from './components/Screens/Season';
+import CircuitsScreen from './components/Screens/Circuits';
+import PilotsScreen from './components/Screens/Pilots';
+
 
 const AppNavigator = createStackNavigator(
   {
@@ -16,8 +19,13 @@ const AppNavigator = createStackNavigator(
     },
     Season: {
       screen: SeasonScreen,
-    }
-
+    },
+    Circuits: {
+      screen: CircuitsScreen,
+    },
+    Pilots: {
+      screen: PilotsScreen,
+    },
   },
   {
     initialRouteName: 'Home',

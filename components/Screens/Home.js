@@ -12,7 +12,7 @@ export default class Home extends React.Component {
   }
   static navigationOptions = () => {
     return {
-      title: 'Home',
+      title: 'Temporadas',
     };
   }
 
