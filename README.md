@@ -2,16 +2,20 @@
 Projeto da matéria React Native do curso 17MOB
 
 ## Apos clonar o repositorio:
-- Rode no terminal os seguintes comendos:
+- Rode no terminal os seguintes comandos:
 
 npm install
 
 A seguir copie todas e cole todas as linhas abaixo:
 
 mkdir ~/.npm-global
+
 npm config set prefix '~/.npm-global'
+
 export PATH=~/.npm-global/bin:$PATH
+
 npm -g install expo-cli --global
+
 export PATH=$PATH:~/.npm-global/bin
 
 (em minha maquina apenas rodando esses comandos foi possivel instalar o expo-cli)
