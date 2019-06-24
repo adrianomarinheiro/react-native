@@ -6,7 +6,7 @@ Projeto da matéria React Native do curso 17MOB
 
 npm install
 
-A seguir copie e cole todas as linhas de comando abaixo:
+- A seguir copie e cole todas as linhas de comando abaixo:
 
 mkdir ~/.npm-global
 
@@ -18,16 +18,16 @@ npm -g install expo-cli --global
 
 export PATH=$PATH:~/.npm-global/bin
 
-# (em minha maquina apenas rodando esses comandos foi possivel instalar o expo-cli)
+(em minha maquina apenas rodando esses comandos foi possivel instalar o expo-cli)
 
 ## Entao digite o seguinte comando no terminal:
 
 npm start
 
-Esse comando abrira a tela de administracao do expo-cli, em seguida basta rodar o simulador que melhor se enquadrar 
+- Esse comando abrira a tela de administracao do expo-cli, em seguida basta rodar o simulador que melhor se enquadrar 
 a seu sistema.
 
-Pode tambem fazer o download do app Expo Client em seu celular, fazer cadastro no mesmo e para que o mesmo abra o app,
+- Pode tambem fazer o download do app Expo Client em seu celular, fazer cadastro no mesmo e para que o mesmo abra o app,
 basta abrir a camera do seu celular, apontar para o QR Code que foi gerado pelo Expo-cli. Logo aparecera uma notificacao
 perguntando se voce deseja abrir com o app Expo. 
 
